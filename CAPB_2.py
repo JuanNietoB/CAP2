@@ -19,8 +19,6 @@ if not all(column in df.columns for column in required_columns):
     print(f"El archivo Excel debe contener las columnas: {required_columns}")
     exit()
 
-# Convertir MW a GW
-df['Capacity(GW)'] = df['Capacity(MW)'] / 1000
 
 # Cargar el GeoJSON con los condados de EE.UU.
 geojson_url = "https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json"
